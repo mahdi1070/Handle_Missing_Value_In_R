@@ -3,7 +3,12 @@ library(xlsx)
 library(dplyr)
 
 # dataset
-data <- as.data.frame(read_excel("C:/Users/Mahdi/Documents/R/M/ckd.xlsx"))
+# change this path to your dataset path
+datasetPath <- "C:/Users/Mahdi/Documents/R/M/ckd.xlsx"  
+
+# sample dataset
+data <- as.data.frame(read_excel(datasetPath))
+
 data[data=="?"]<-NA
 
 # convert column to numeric , in this dataset 1 to 14 convert to numeric
